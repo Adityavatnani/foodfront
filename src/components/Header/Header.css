@@ -36,8 +36,37 @@
     padding: 1vw 2.3vw;
     background-color: white;
     font-size: max(1vw, 13px);
-    border-radius: 50px;
-}
+    border-radius: 50px;}
+    .header-contents button{
+        overflow: hidden;
+        transform: perspective(1px) translateZ(0);
+        
+        &:hover {
+          background-color: tomato; /* Replace with your desired color */
+          
+          &:before {
+            transform: rotate(0);
+          }
+        }
+        
+        &:before {
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          content: '';
+          transition: transform 0.6s ease;
+          transform: rotate(-90deg) scale(2);
+          transform-origin: 0 100%;
+          background-color: white;
+        }
+      }
+    
+
+  
+
 
 @media (max-width: 1050px) {
     .header-contents{
