@@ -57,3 +57,14 @@
         text-align: center;
     }
 }
+.footer-content-right ul li a {
+    color: #ffffff; /* Tomato color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-content-right ul li a:hover {
+    color: #fdfdfd; /* Lighter tomato color */
+    text-decoration: underline;
+}
