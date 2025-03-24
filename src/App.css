@@ -27,6 +27,20 @@
   }
 }
 
+@keyframes bgColorAnimation {
+  0% { background: #FFE5B4; }  /* Light Peach */
+  25% { background: #FFC074; } /* Soft Orange */
+  50% { background: #FFA559; } /* Warm Orange */
+  75% { background: #FF8C42; } /* Deeper Orange */
+  100% { background: #FFE5B4; } /* Back to Light Peach */
+}
+
+.animated-background {
+  width: 100vw;
+  height: 100vh;
+  animation: bgColorAnimation 10s infinite linear;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
