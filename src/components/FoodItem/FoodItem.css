@@ -3,10 +3,15 @@
     margin: auto;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     animation: fadeIn 1s ease-in-out;
-    background: #fff;
+    background: #fff; /* Default Light Mode */
     overflow: hidden;
+}
+
+body.theme--dark .food-item {
+    background: #222; /* Dark Mode */
+    color: #fff;
 }
 
 .food-item:hover {
@@ -18,6 +23,12 @@
     position: relative;
     overflow: hidden;
     border-radius: 15px 15px 0 0;
+    background: #fff; /* Default Light Mode */
+    transition: background 0.3s ease;
+}
+
+body.theme--dark .food-item-img-container {
+    background: #222; /* Dark Mode */
 }
 
 .food-item-img {
@@ -48,6 +59,10 @@
     color: #333;
 }
 
+body.theme--dark .food-item-name-rating p {
+    color: #fff; /* Ensure text is visible in dark mode */
+}
+
 .food-item-name-rating img {
     width: 70px;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
@@ -57,6 +72,10 @@
     color: #676767;
     font-size: 14px;
     line-height: 1.5;
+}
+
+body.theme--dark .food-item-desc {
+    color: #bbb; /* Light gray text for readability */
 }
 
 .food-item-price {
@@ -86,6 +105,7 @@
     background: #ff6347;
 }
 
+/* Counter Button - Do Not Change */
 .food-item-counter {
     position: absolute;
     bottom: 15px;
@@ -95,9 +115,20 @@
     gap: 10px;
     padding: 6px 12px;
     border-radius: 50px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+}
+
+/* Dark Mode Fix for Counter Button */
+body.theme--dark .food-item-counter {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.2);
+}
+
+body.theme--dark .food-item-counter img {
+    filter: brightness(1) invert(1);
 }
 
 .food-item-counter img {
